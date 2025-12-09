@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tic-Tac-Toe (ES6 Modules)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Tic-Tac-Toe</h1>
+
+    <section class="status-bar">
+      <div id="turnIndicator" class="turn">Turn: <span id="currentPlayer">X</span></div>
+      <div class="controls">
+        <button id="restartBtn">Restart</button>
+        <button id="resetScoreBtn" class="secondary">Reset Score</button>
+      </div>
+    </section>
+
+    <section id="board" class="board" role="grid" aria-label="Tic Tac Toe board">
+      <!-- cells created dynamically -->
+    </section>
+
+    <section class="info">
+      <div class="message" id="message">Click a cell to play.</div>
+      <div class="scoreboard">
+        <div>Score:</div>
+        <div>X: <span id="scoreX">0</span></div>
+        <div>O: <span id="scoreO">0</span></div>
+        <div>Draws: <span id="scoreDraw">0</span></div>
+      </div>
+    </section>
+
+    <footer>Two-player local game • Built with vanilla JS modules</footer>
+  </main>
+
+  <!-- Module entry -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

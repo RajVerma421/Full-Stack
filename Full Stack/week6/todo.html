@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To‑Do List</title>
+    <style>
+      :root{--bg:#f6f8fb;--card:#ffffff;--accent:#4f46e5;--muted:#6b7280}
+      html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
+      body{background:linear-gradient(180deg,var(--bg),#eef2ff);display:flex;align-items:center;justify-content:center;padding:32px}
+      .wrap{width:100%;max-width:720px}
+      .card{background:var(--card);border-radius:12px;box-shadow:0 6px 30px rgba(15,23,42,0.06);padding:20px}
+      header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+      h1{font-size:20px;margin:0}
+      .controls{display:flex;gap:8px}
+      input[type=text]{flex:1;padding:10px 12px;border:1px solid #e6e9f2;border-radius:8px;outline:none}
+      button{background:var(--accent);color:#fff;border:none;padding:9px 12px;border-radius:8px;cursor:pointer}
+      button.secondary{background:#fff;color:var(--accent);border:1px solid rgba(79,70,229,0.12)}
+      .list{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+      .item{display:flex;align-items:center;gap:12px;padding:10px;border-radius:8px;border:1px solid #f0f2f7}
+      .item.done{background:linear-gradient(90deg,rgba(79,70,229,0.04),rgba(79,70,229,0.02));text-decoration:line-through;color:var(--muted)}
+      .content{flex:1;display:flex;align-items:center;gap:12px}
+      .content .text{font-size:15px}
+      .meta{display:flex;gap:8px}
+      .empty{padding:28px;text-align:center;color:var(--muted)}
+      .filters{display:flex;gap:8px;margin-top:12px}
+      .badge{padding:6px 10px;border-radius:999px;background:#f8fafc;color:var(--muted);font-size:13px}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <header>
+          <h1>To‑Do List</h1>
+          <div class="controls">
+            <input id="newTask" type="text" placeholder="Add a new task" />
+            <button id="addBtn">Add</button>
+            <button id="clearCompleted" class="secondary">Clear Done</button>
+          </div>
+        </header>
+        <section>
+          <div class="filters">
+            <div id="count" class="badge">0 items</div>
+            <div style="flex:1"></div>
+            <div>
+              <select id="filter">
+                <option value="all">All</option>
+                <option value="active">Active</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+          </div>
+          <div id="list" class="list"></div>
+          <div id="empty" class="empty">No tasks yet. Add one above.</div>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+

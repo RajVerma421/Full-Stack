@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 9 — To-Do & Chessboard</title>
+
+  <!-- LINK TO CSS (cache-busted) -->
+  <link rel="stylesheet" href="styles.css?v=2" />
+
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Week 9: Advanced DOM Applications</h1>
+      <p class="subtitle">Feature-rich To-Do list & dynamically generated chessboard</p>
+    </header>
+
+    <section class="card" id="todo-section">
+      <h2>To-Do List (Move up / Move down / Delete / Checkbox)</h2>
+      <div class="todo-controls">
+        <input id="todo-input" type="text" placeholder="Add new todo..." />
+        <button id="add-btn">Add</button>
+      </div>
+      <ul id="todo-list" aria-live="polite"></ul>
+      <p class="hint">Tip: use the buttons next to each item to reorder or delete it.</p>
+    </section>
+
+    <section class="card" id="chess-section">
+      <h2>Interactive Chessboard (generated via JS)</h2>
+      <div class="board-controls">
+        <label for="board-size">Board size:</label>
+        <select id="board-size">
+          <option value="8" selected>8 × 8</option>
+          <option value="6">6 × 6</option>
+          <option value="10">10 × 10</option>
+        </select>
+        <button id="regen-board">Generate</button>
+      </div>
+      <div id="chessboard" role="grid" aria-label="Chessboard"></div>
+      <p class="hint">Click a square to toggle highlight. Hover to see coordinates.</p>
+    </section>
+
+    <footer>
+      <small>Made for Week 9 — Advanced DOM (vanilla JS)</small>
+    </footer>
+  </main>
+
+  <!-- LINK TO JS (cache-busted) -->
+  <script src="script.js?v=2"></script>
+</body>
+</html>

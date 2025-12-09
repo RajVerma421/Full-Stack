@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A simple, modern HTML5 boilerplate" />
+  <meta name="author" content="Your Name" />
+
+  <title>Document</title>
+
+  <!-- Favicon (replace with your file) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Preconnects / performance hints -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
+  <!-- Stylesheet (create styles.css) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Open Graph / Social meta (optional) -->
+  <meta property="og:title" content="Document" />
+  <meta property="og:description" content="A simple, modern HTML5 boilerplate" />
+  <meta property="og:type" content="website" />
+
+  <!-- Accessibility: default language declared, plus theme-color for mobile UI -->
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Default canonical (change if needed) -->
+  <link rel="canonical" href="/" />
+
+  <!-- Inline critical CSS (optional): small snippet to avoid FOUS -->
+  <style>
+    /* Minimal reset */
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    :root{--max-w:1100px;--pad:1rem}
+    .container{max-width:var(--max-w);margin:0 auto;padding:var(--pad)}
+  </style>
+</head>
+<body>
+  <header class="container" role="banner">
+    <h1 id="page-title">Page Title</h1>
+    <p class="lead">A short description or tagline.</p>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container" id="main" role="main" tabindex="-1">
+    <section aria-labelledby="intro">
+      <h2 id="intro">Introduction</h2>
+      <p>Welcome — edit this boilerplate to start your project.</p>
+    </section>
+
+    <section aria-labelledby="examples">
+      <h2 id="examples">Examples</h2>
+      <p>Replace or remove these sections as you build your page.</p>
+    </section>
+  </main>
+
+  <footer class="container" role="contentinfo">
+    <p>&copy; <span id="year"></span> Your Company</p>
+  </footer>
+
+  <!-- Scripts: place non-critical scripts at the end -->
+  <script>
+    // Small helper: update year and enable skip to main for accessibility
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js" defer></script>
+</body>
+</html>
