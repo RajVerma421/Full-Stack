@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Interactivity Demo</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  /* FAQ Section */
+  .faq-answer {
+    display: none;
+    padding: 10px;
+    background: #f3f3f3;
+    border-left: 3px solid #007bff;
+    margin-bottom: 10px;
+  }
+
+  .faq-question {
+    cursor: pointer;
+    background: #e7e7e7;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+
+  /* Dynamic Styling Box */
+  .box {
+    width: 150px;
+    height: 150px;
+    background: lightgray;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
+  /* Login Form */
+  #loginBox {
+    display: none;
+    width: 250px;
+    padding: 20px;
+    background: #eee;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  button {
+    margin-top: 10px;
+  }
+</style>
+
+</head>
+<body>
+
+<h1>jQuery Interactivity (FAQ + CSS + Login Form)</h1>
+
+<!-- FAQ SECTION -->
+<h2>FAQ Section</h2>
+
+<div class="faq-item">
+  <h3 class="faq-question">What is jQuery?</h3>
+  <p class="faq-answer">jQuery is a JavaScript library that simplifies DOM manipulation and animations.</p>
+</div>
+
+<div class="faq-item">
+  <h3 class="faq-question">Why use jQuery?</h3>
+  <p class="faq-answer">It helps create smooth effects, animations, and handle events easily.</p>
+</div>
+
+
+<!-- DYNAMIC CSS -->
+<h2>Dynamic Styling with .css()</h2>
+<button id="styleBtn">Change Box Style</button>
+
+<div class="box"></div>
+
+
+<!-- LOGIN FORM WITH FADE EFFECT -->
+<h2>Login Form Animation</h2>
+
+<button id="openLogin">Open Login Form</button>
+
+<div id="loginBox">
+  <h3>Login</h3>
+  <input type="text" placeholder="Username"><br><br>
+  <input type="password" placeholder="Password"><br><br>
+  <button id="closeLogin">Close</button>
+</div>
+
+
+<!-- jQuery SCRIPT -->
+<script>
+
+  /* FAQ Toggle + Dynamic Text Styling */
+  $(".faq-question").click(function () {
+    $(this).next(".faq-answer").slideToggle();
+
+    // Apply dynamic styling
+    $(this).css({
+      "color": "#007bff",
+      "font-weight": "bold"
+    });
+  });
+
+
+  /* Dynamic CSS Button */
+  $("#styleBtn").click(function () {
+    $(".box").css({
+      "background": "yellow",
+      "border": "3px solid #007bff",
+      "border-radius": "15px"
+    });
+  });
+
+
+  /* Fade In / Fade Out Login Form */
+  $("#openLogin").click(function () {
+    $("#loginBox").fadeIn(600);
+  });
+
+  $("#closeLogin").click(function () {
+    $("#loginBox").fadeOut(600);
+  });
+
+</script>
+
+</body>
+</html>
